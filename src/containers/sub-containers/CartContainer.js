@@ -22,7 +22,7 @@ class CartContainer extends React.Component {
     checkout = () => {
         let completedOrder
         let newOrder
-        fetch(`http://localhost:3000/orders/${localStorage.orderId}`, {
+        fetch(`https://rock-shop-api.herokuapp.com/orders/${localStorage.orderId}`, {
             method: "PATCH",
             headers: {
                 "Authorization": this.props.token.toString(),
@@ -36,7 +36,7 @@ class CartContainer extends React.Component {
         .then(data => {
             this.props.clearCart()
             completedOrder = data
-            fetch("http://localhost:3000/orders", {
+            fetch("https://rock-shop-api.herokuapp.com/orders", {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"

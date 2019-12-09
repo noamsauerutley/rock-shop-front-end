@@ -3,7 +3,7 @@ import React from 'react';
 class DeleteUser extends React.Component{
 
     delete = async () => {
-        await fetch(`http://localhost:3000/users/${localStorage.userId}`, {
+        await fetch(`https://rock-shop-api.herokuapp.com/users/${localStorage.userId}`, {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",

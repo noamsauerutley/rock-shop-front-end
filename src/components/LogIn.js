@@ -17,7 +17,7 @@ class LogIn extends React.Component {
 
   logInSubmitted = (event) => {
     event.preventDefault()
-    fetch("http://localhost:3000/login", {
+    fetch("https://rock-shop-api.herokuapp.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -36,7 +36,7 @@ class LogIn extends React.Component {
           // debugger
           console.log(data)
           // this.props.setToken(data)
-          fetch(`http://localhost:3000/orders/${data.order_id}`)
+          fetch(`https://rock-shop-api.herokuapp.com/orders/${data.order_id}`)
           .then(r => r.json())
           .then(order => {
             let information = {
@@ -55,7 +55,7 @@ class LogIn extends React.Component {
 
   signUpSubmitted = (event) => {
     event.preventDefault() 
-    fetch("http://localhost:3000/users", {
+    fetch("https://rock-shop-api.herokuapp.com/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -78,7 +78,7 @@ class LogIn extends React.Component {
   }
 
   createEmptyOrder = (data) => {
-    fetch("http://localhost:3000/orders", {
+    fetch("https://rock-shop-api.herokuapp.com/orders", {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"

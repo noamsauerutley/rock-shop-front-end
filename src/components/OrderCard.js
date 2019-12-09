@@ -6,7 +6,7 @@ class OrderCard extends React.Component {
     }
 
     componentDidMount = async () => {
-        let rawOrder = await fetch (`http://localhost:3000/orders/${this.props.order.id}`, {
+        let rawOrder = await fetch (`https://rock-shop-api.herokuapp.com/orders/${this.props.order.id}`, {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": localStorage.token

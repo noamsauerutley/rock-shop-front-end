@@ -7,7 +7,7 @@ class EditUsername extends React.Component{
     }
 
     editUsername = async (newUsername) => {
-        await fetch(`http://localhost:3000/users/${localStorage.userId}`, {
+        await fetch(`https://rock-shop-api.herokuapp.com/users/${localStorage.userId}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",

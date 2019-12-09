@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   componentDidMount = async() => {
-    let rawRocks = await fetch('http://localhost:3000/rocks')
+    let rawRocks = await fetch('https://rock-shop-api.herokuapp.com/rocks')
     let rocks = await rawRocks.json() 
       this.setState({
         token: localStorage.token,
@@ -84,7 +84,7 @@ class App extends React.Component {
     // })
     localStorage.cart = this.state.cart.map(item => item.id )
     if (this.state.loggedInUserId) {
-      fetch('http://localhost:3000/purchases', {
+      fetch('https://rock-shop-api.herokuapp.com/purchases', {
         method: "POST",
         headers: {
           "Authorization": this.state.token,
@@ -114,7 +114,7 @@ class App extends React.Component {
   }
 
   removeFromCart = (purchase) => {
-    fetch(`http://localhost:3000/purchases/${purchase.id}`, {
+    fetch(`https://rock-shop-api.herokuapp.com/purchases/${purchase.id}`, {
         method: 'DELETE'
     })
     .then(() => {

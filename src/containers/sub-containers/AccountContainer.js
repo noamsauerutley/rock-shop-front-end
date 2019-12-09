@@ -9,7 +9,7 @@ class AccountContainer extends React.Component{
         myOrders: []
     }
     componentDidMount = async () => {
-        let rawUser = await fetch(`http://localhost:3000/users/${localStorage.userId}`, {
+        let rawUser = await fetch(`https://rock-shop-api.herokuapp.com/users/${localStorage.userId}`, {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": this.props.token
