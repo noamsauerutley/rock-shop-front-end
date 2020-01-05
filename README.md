@@ -5,6 +5,12 @@
 <p>Rock Shop is a e-commerce web app for rare rock sales. Custom styled using inline CSS for an appealing UI, Rock Shop manages auth using JWT and utilizes local storage for improved user experience.</p>
 </blockquote>
 
+
+<hr></hr>
+  <h3><a href="https://rock-shop-app.herokuapp.com/" >Check it out on Heroku!</a></h3>
+<hr></hr>
+
+
 <p><strong>Built With:</strong></p>
 
 <ul>
