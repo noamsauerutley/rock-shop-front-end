@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const style = {
     margin: "10px",
     position: "fixed",
-    height: "100%",
+    height: "85vh",
     display: "flex",
     flexDirection: "column",
     flexWrap: "wrap",
@@ -82,7 +82,7 @@ export class SideBar extends Component {
     render() {
         return (
             <div style={style}>
-                <h4 style={{marginTop: "50px", marginBottom: "30px"}}>Categories:</h4>
+                <h4 style={{marginTop: "20px", marginBottom: "20px"}}>Categories:</h4>
                 <label>Filter:</label>
                 <NavLink to="/rocks" style={{marginBottom: "20px"}}>
                     <select value={this.state.value} onChange={this.handleCategoryChange}>
