@@ -35,7 +35,7 @@ export class NavBar extends Component {
         color: "#343a40", 
         display: "flex", 
         justifyContent: "space-around"}}>
-        <Link to="/" style={{color: "#343a40", textDecorationColor: "#929ca7"}}>Rock {<img style={{width: "50px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUBT0EORU4YFpG7YJr8Vm3Pn6WqAYurrIN4Qy4KzBTEMR-_c3&s" alt="logo"/>} Shop</Link>
+        <Link to="/" style={{color: "#343a40", textDecorationColor: "#929ca7"}}>Rock {<img style={{width: "50px"}} src="../assets/mstile-150x150.png" alt="logo"/>} Shop</Link>
         <Link to="/rocks" style={{color: "#343a40", textDecorationColor: "#929ca7"}}>{!!localStorage.userId ? "Browse Rocks" : ""}</Link>
         <Link to={`/account`} style={{color: "#343a40", textDecorationColor: "#929ca7"}}>{!!localStorage.userId ? "My Account" : ""}</Link>
         <Link to="/cart" style={{color: "#343a40", textDecorationColor: "#929ca7"}}>{!!localStorage.userId ? "Cart: " + this.props.cartNum : ""}</Link>
