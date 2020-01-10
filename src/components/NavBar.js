@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom'
+import logo from '../assets/mstile-150x150.png'
 
 export class NavBar extends Component {
 
   logButton = () => {
     if(!this.props.token){
-      return <Link to="/login" style={{color: "#343a40", textDecorationColor: "#929ca7"}}>Log In</Link>
+      return <Link to="/login" style={{color: "#343a40", textDecorationColor: "#929ca7", marginTop: "22px"}}>Log In</Link>
     } else {
-      return <a href="/" onClick={this.handleLogOut} style={{color: "#343a40", textDecorationColor: "#929ca7"}}>Log Out</a>
+      return <a href="/" onClick={this.handleLogOut} style={{color: "#343a40", textDecorationColor: "#929ca7", marginTop: "22px"}}>Log Out</a>
     }
   }
   handleLogOut = (e) => {
@@ -35,10 +36,10 @@ export class NavBar extends Component {
         color: "#343a40", 
         display: "flex", 
         justifyContent: "space-around"}}>
-        <Link to="/" style={{color: "#343a40", textDecorationColor: "#929ca7"}}>Rock {<img style={{width: "50px"}} src="../assets/mstile-150x150.png" alt="logo"/>} Shop</Link>
-        <Link to="/rocks" style={{color: "#343a40", textDecorationColor: "#929ca7"}}>{!!localStorage.userId ? "Browse Rocks" : ""}</Link>
-        <Link to={`/account`} style={{color: "#343a40", textDecorationColor: "#929ca7"}}>{!!localStorage.userId ? "My Account" : ""}</Link>
-        <Link to="/cart" style={{color: "#343a40", textDecorationColor: "#929ca7"}}>{!!localStorage.userId ? "Cart: " + this.props.cartNum : ""}</Link>
+        <Link to="/" style={{color: "#343a40", textDecorationColor: "#929ca7"}}>Rock{<img src={logo} style={{width: "75px"}} alt="logo"/>}Shop</Link>
+        <Link to="/rocks" style={{color: "#343a40", textDecorationColor: "#929ca7", marginTop: "22px"}}>{!!localStorage.userId ? "Browse Rocks" : ""}</Link>
+        <Link to={`/account`} style={{color: "#343a40", textDecorationColor: "#929ca7", marginTop: "22px"}}>{!!localStorage.userId ? "My Account" : ""}</Link>
+        <Link to="/cart" style={{color: "#343a40", textDecorationColor: "#929ca7", marginTop: "22px"}}>{!!localStorage.userId ? "Cart: " + this.props.cartNum : ""}</Link>
         {this.logButton()}
       </nav>
     )
