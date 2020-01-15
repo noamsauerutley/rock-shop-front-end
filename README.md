@@ -15,7 +15,6 @@
   <h3><a href="https://rock-shop-app.herokuapp.com/" >Check it out on Heroku!</a></h3>
 <hr></hr>
 
- <hr></hr>
   <div>
   <p>View demo as <a href="https://i.imgur.com/fmhe992.gif">GIF on Imgur</a> or <a href="https://youtu.be/R62OYe9zGXo">video on Youtube</a></p>
 </div>  
