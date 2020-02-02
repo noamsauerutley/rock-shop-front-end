@@ -7,6 +7,10 @@
 <p>Rock Shop is a e-commerce web app for rare rock sales. Custom styled using inline CSS for an appealing UI, Rock Shop manages auth using JWT and utilizes local storage for improved user experience.</p>
 
 <hr></hr>
+<p>
+  See the Back-End <a href="https://github.com/noamsauerutley/rock-shop-api">here</a>.
+</p>
+<hr></hr>
 
 <p><strong>Built With:</strong></p>
 <ul>
