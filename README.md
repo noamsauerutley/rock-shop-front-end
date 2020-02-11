@@ -17,6 +17,9 @@
   <li>React.js</li>
 </ul>
   <h3><a href="https://rock-shop-app.herokuapp.com/" >Check it out on Heroku!</a></h3>
+  <p> <b>Username:</b> <i>demo</i> <br>
+  <b>Password:</b> <i>samplepasswordforrockshop</i>
+  </p>
 <hr></hr>
 
   <div>
